@@ -1,0 +1,574 @@
+body {
+    background-color: $bgColor;
+}
+    
+    /* INICIO SECCION HTML INDEX */
+
+#cuotas {
+    background-color: $bgColor;
+    color: $colorText;
+    text-align: $tAling;
+    height: 22px;
+
+    h1 {
+        font-size: 17px;
+        letter-spacing: 2px;
+        font-weight: $fWeight;
+    
+        &:hover {
+            text-decoration: underline;
+            color: red;
+            transition: 0.2s;
+        }
+    }
+}
+
+.logoNav {
+        filter: drop-shadow(7px 7px 10px rgb(0, 0, 0));
+
+        &:hover {
+            transform: scale(1.1);
+            transition: all 0.8s;
+            overflow: hidden;
+        }
+}
+
+.logoNav, .logoFooter {
+    border-radius: 5px;
+}   
+
+ul li {
+    font-size: 20px;
+    font-weight: $fWeight;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.subMenu {
+    position: absolute;
+    background: black;
+    border-radius: 5px;
+    display: none;
+    list-style: none;
+   
+    li a {
+        display: block;
+        font-size: 15px;
+        padding: 10px;
+        color: #fff;
+        font-family: sans-serif;
+        text-decoration: none;
+    }
+}     
+
+.menu li:hover .subMenu{
+    display: block;
+}
+
+.subMenu li a:hover {
+    text-decoration: none;
+    border-radius: 10px;
+    border-top: none;
+    color: red;
+}
+
+
+.buscador {
+    margin-top: 10px;
+    margin-right: 80px;
+    width: 230px;
+}
+
+.carrito {
+    font-size: 32px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.bordeNav {
+    border-bottom: 2px solid black;
+}    
+
+.seleccion {
+    background-image: url(../Imagenes/Green-leaves-texture-wood-board-background_3840x1200.jpg);
+    background-size: cover;
+    background-blend-mode: soft-light;
+    height: 750px;
+    background-color: rgb(24, 24, 24);
+    background-attachment: fixed;
+
+    .margen {
+        margin-right: 30px;
+    }
+
+    .card {
+        background-color: transparent;
+        margin-top: 50px;
+
+        .tamaño {
+            width: 300px;
+            opacity: 75%;
+
+            &:hover {
+                border: 2px dashed $colorText;
+                opacity: 100%;
+                transition: all 0.5s;
+                transform: scale(1.1);
+                overflow: hidden;
+                filter: drop-shadow(7px 7px 10px rgb(91, 155, 32));
+            }
+        
+        }
+    }
+}
+
+.margenCarousel, .datosContacto2 {
+    margin-top: 118px;
+}
+
+    /* INICIO SECCION CONTACTOS */     
+
+.formulario {
+    background-color: $bgColor;
+    color: $colorText;
+    height: auto;
+
+    .formu {
+        margin-top: 30px;
+    }
+}
+
+.btn-primary {
+    background-color: $bgColorBtn;
+    border-color: $colorText;
+    letter-spacing: 1px;
+
+    &:hover {
+        font-weight: bold;
+        background-color: $bgColorBtn;
+        transform: scale(0.9);
+        border-color: $colorText;
+    }
+    
+    &:focus {
+        background-color: blue;
+    }    
+}  
+   
+        /* EXTEND REALIZADO SOBRE BOTONES DEL FORMULARIO EN SECCION CONTACTO */
+
+.button1 {
+    @extend .btn-primary;
+    color: $colorText;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+h2 {
+    padding: 30px;
+    text-align: $tAling;
+    text-decoration: underline;
+    font-size: 40px;
+    font-weight: $fWeight;
+    letter-spacing: 3px;
+}     
+
+ .flex, .mapa {
+    margin-left: 20px;
+    margin-right: 20px;
+ }
+
+ iframe {
+    margin-top: 50px;
+ }
+
+.fondo {
+    background-color: black;
+    height: 560px;
+}  
+
+.datosContacto2 {
+     display: grid;
+     grid-gap: 2px;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: repeat(1);
+
+     grid-template-areas: "datosContacto datosContacto";
+
+     .datosContacto {
+        grid-area: datosContacto;
+    }
+   
+   .bannerContacto {
+        height: 270px;
+        background-image: url(../Imagenes/bannercontacto.jpg);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        margin-top:-2px;
+    }
+   
+   .tituloBannerContacto {
+        color: black;
+       font-family: 'Times New Roman', Times, serif;
+        font-size: 40px;
+        margin-top: 50px;
+        letter-spacing: 3px;
+    }
+   
+   .textoContacto {
+        color: black;
+        text-align: center;
+        font-weight: bold;
+    }
+ }
+
+    /* FIN SECCION HTML CONTACTOS */ 
+    /* INICIO SECCION HTML FOOTER */
+
+     footer {
+        border-top: 1px solid $colorText;
+        height: 550px;
+
+        .divFooter {
+            text-align: center;
+            background-color: $bgColor;
+            color: $colorText;
+        
+            .tituloNav {
+                font-size: 22px;
+                font-family: sans-serif;
+                letter-spacing: 3px;
+                font-weight: $fWeight;
+            }
+            
+            .refNav {
+                color: $colorText;
+                text-decoration: none;
+                font-weight: $fWeight;
+                font-size: 15px;
+        
+                &:hover {
+                    color: rgb(190, 10, 10);
+                }
+            }
+            
+            .bi-facebook, .bi-instagram, .bi-whatsapp {
+                font-size: 30px;
+                margin: 10px;
+            }
+            
+            .bi-facebook:hover {
+                color: rgb(73, 96, 230);
+            }
+            
+            .bi-instagram:hover {
+                color: rgb(201, 72, 72);
+            }
+            
+            .bi-whatsapp:hover {
+                color: $bgColorBtn;
+            }
+
+            .logoFooter:hover {
+                filter: drop-shadow(7px 7px 10px rgb(255, 255, 255));
+            }
+            
+            .logoFooter:hover {
+                transform: scale(1.1);
+                transition: all 0.8s;
+                overflow: hidden;
+            }       
+        }
+    }
+
+.parrafoCopyright {
+    margin-top: 90px;
+}
+
+.hrBarra {
+    height: 4px;
+    background-color: $colorText;
+}
+
+ /* INICIO SECCION HTML NOSOTROS */
+
+.bannerNosotros {
+ margin-top: 130px;
+    
+ &:hover {
+    -webkit-transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+      transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+}
+} 
+
+.fondoDescripcionNosotros {
+     background-color: black;
+     color: white;
+
+     .imagenDescripcionNosotros {
+        background-image: url(../Imagenes/empresa-bg\ \(1\).jpg);
+        background-position-x: -600px;
+     }  
+
+     .nos {
+        margin-top: 180px;
+        opacity: 70%;
+        border-radius: 30px;
+   
+        &:hover {
+           border-radius:50%;
+           -webkit-border-radius:50%;
+           box-shadow: 0px 0px 15px 15px #ec731e;
+          -webkit-box-shadow: 0px 0px 15px 15px #ec731e;
+           transform: rotate(360deg);
+           -webkit-transform: rotate(360deg);
+           transition: all 1s;
+    }
+   }
+  }
+
+.descripcionNosotrosTitulo {
+     background-color: rgb(255, 255, 255);
+     color: rgb(151, 17, 17);
+     margin-top: -20px;
+     margin-left: 200px;
+     position: absolute;
+     font-size: 32px;
+     font-weight: bold;
+     width: 950px;
+    text-align: center;
+     border-radius: 5px;
+     border: 1px solid rgb(0, 0, 0);
+
+        &:hover {
+            background-image: linear-gradient(to right, black, transparent);
+    }
+ }
+
+.descripcionNosotrosParrafo {
+     margin-top: 40px;
+     text-align: center;
+     color: rgb(235, 235, 178);
+ }
+ 
+
+   /* INICIO SECCION HTML HOMBRE */
+
+
+#ver {
+    text-align: center;
+    height: auto;
+    background-color: beige;
+    color: black; 
+    margin-top: 150px;
+    #menues ul {
+        color: white;
+     }
+}
+
+.presentacionCatalogo {
+     margin-top: 130px;
+     justify-content: space-around;
+     background-color: black;
+     color: white;
+     width: 100%;
+
+        .pCHLista {
+            margin-top: 40px;
+        }
+
+     .ubicacionHombre, .ubicacionMujer {
+        margin-top: 40px;
+        &:hover, &:hover {
+            transition: all 0.5s;
+            transform: scale(1.1);
+           overflow: hidden;
+        }
+    }
+ }
+
+.listaCatalogo {
+     list-style: none;
+     margin-top: 50px;
+
+      li a {
+        text-decoration: none;
+        color: white;
+        font-size: 23px;
+        line-height: 35px;
+        margin-left: 15px;
+    }
+
+    .folder {
+        width: 30px;
+        height: 30px;
+    }
+ }
+
+
+.listaCatalogo li a:hover{
+     color: rgb(139, 3, 3);
+     text-decoration: underline;
+     transition: all .3s;
+ }
+
+.h3Productos, .h3RangoDePrecios, .h3Categorias {
+     font-size: 30px;
+     color:   white;
+     letter-spacing: 2px;
+     font-weight: bold;
+ }
+
+.h3Categorias {
+     margin-left: 30px;
+     margin-top: 30px;
+ }
+
+.fotoCatalogo, .pCHLista2 {
+     color: white;
+     height: auto;
+ }
+
+.llavero, .stickers {
+     display: none;
+ }
+
+.card-img-top {
+     opacity: 85%;
+
+     &:hover {
+        transition: all 0.5s;
+        transform: scale(1.1);
+        overflow: hidden;
+        opacity: 100%;
+    }
+ }
+
+.columnaCatalogo {
+    margin-top: 50px;
+
+        .cardTamaño {
+            width: 200px;
+
+            .card-body {
+                text-align: center;
+                background-color: rgb(32, 32, 32);
+                height: 180px;
+           
+                .card-title, .card-text, .comprar {
+                   text-align: center;
+               }
+
+               .card-title, .card-text {
+                    // background-color: rgb(75, 75, 75);
+                    height: 20px;
+            }
+           
+                .card-body, .card-title, .card-text {
+                border-radius: 4px;
+            }
+            }
+ }
+}
+
+.comprar {
+     background-color: rgb(0, 85, 25);
+     font-weight: bold;
+ }
+
+ .bC {
+    width: 165px;
+ }
+
+ .aA {
+    margin-top: 7px;
+ }
+
+    /* INICIO SECCION HTML SKATEBOARDING */
+
+.paginaMantenimiento {
+    margin-top: 130px;
+    height: 800px;
+     background-image: url(../Imagenes/skatepark.jpg);
+     background-blend-mode: soft-light;
+     background-color: rgb(102, 102, 102);
+     background-size: cover;     
+
+     .textoMantenimiento {
+        padding-top: 300px;
+        width: 650px;
+        margin-left: 350px;
+        text-align: center;
+    }  
+}    
+
+ .footerHombre, .footerMujer {
+     margin-top: 120px;
+ }
+
+         /* MIXIN REALIZADO SOBRE PARRAFO EN SECCION NOSOTROS */
+
+ @mixin negrita {
+    font-weight: bold;
+ }
+
+ @mixin subrayado($color, $tipo) {
+    text-decoration: underline;
+    text-decoration-color: $color;
+    text-decoration-style: $tipo;
+ }
+
+ .descripcionNosotrosParrafo {
+    @include negrita;
+    @include subrayado(rgb(224, 170, 20), underline)
+ }
+
+
+
+ #contenedorDeProductos {
+    background-color: rgb(14, 1, 0);
+    height: auto;
+    margin-top: 150px;
+ }
+
+ .producto {
+    border: 3px dotted rgb(255, 255, 255);
+    margin: 20px;
+    width: 400px;
+    display: inline-block;
+  }
+
+.producto h3, h4, p {
+    color: white;
+}
+
+.producto img {
+    width: 300px;
+    height: 300px;
+}
+
+  .boton-volver{
+    display: inline;
+    color: black;
+    background-color: rgb(255, 0, 0);
+  }
+
+.boton-VerDetalle {
+    background-color: green;
+    color: white;
+    margin-right: 20px;
+}
+
+.botonComprarProducto{
+    background-color: green;
+    color: white;
+}
+
+.boton-VerDetalle, .botonComprarProducto, .boton-volver {
+    font-weight: bold;
+} 
